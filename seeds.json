@@ -1,0 +1,42 @@
+[
+    {
+        "model": "events.Event",
+        "pk": 1,
+        "fields": {
+            "title":"EICC" ,
+            "description": "A concert", 
+            "datetime": "2021-01-01T14:00:00.000Z",
+            "cost": 15.00
+        }
+    },
+    {
+        "model": "events.Event",
+        "pk": 2,
+        "fields": {
+            "title": "TED Talk - Data ",
+            "description": "CodeClan Offices", 
+            "datetime": "2022-10-10T16:00:00.000Z",
+            "cost": 10.00
+        }
+    },
+    {
+        "model": "events.Event",
+        "pk": 3,
+        "fields": {
+            "title": "SECC",
+            "description": "Another fun concert", 
+            "datetime": "2022-04-08T12:00:00.000Z",
+            "cost": 20.00
+        }
+    },
+    {
+        "model": "events.Event",
+        "pk": 4,
+        "fields": {
+            "title": "Cool Kids",
+            "description": "Best Rap Stars", 
+            "datetime": "2022-04-08T12:00:00.000Z",
+            "cost": 0
+        }
+    }
+]
