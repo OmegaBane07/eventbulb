@@ -117,6 +117,7 @@ background: linear-gradient(45deg, #8D2DCE 0%, #6892C5 100%);;
 
 .card {
     display: flex;
+    contain: content;
     margin: 0.5rem;
     padding: 1.5rem;
     background-color: rgb(153, 153, 153);
@@ -216,7 +217,7 @@ input[type="text"], input[type="password"], textarea {
 
 .half-width {
   justify-self: center;
-  width: 50%;
+  width: 60%;
   background-color: rgb(122, 102, 124);
 }
 .full-width {
@@ -272,7 +273,7 @@ input[type="text"], input[type="password"], textarea {
 
 .event-image {
   background-color: white;
-  object-fit: cover;
+  object-fit: fill;
   width: 10rem;
   height: 10rem;
   margin-right: 0.5rem;
@@ -348,8 +349,8 @@ input[type="text"], input[type="password"], textarea {
 img.eventsimg{
   margin-right: auto;
   margin-left: auto;
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
   object-fit: contain;
   border-radius:5% ;
 }
@@ -361,3 +362,29 @@ p.landing-text{
   margin-bottom: auto;
 }
 
+.column-dashboard{
+
+  display: flex;
+}
+
+.card-C{
+  width: 50%;
+  height: auto;
+  margin: 0.5rem;
+  padding: 1.5rem;
+  background-color: rgb(153, 153, 153);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-small)
+}
+
+.card-review{
+  margin: 0.5rem;
+  padding: 1.5rem;
+  background-color: whitesmoke;
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow-small)
+}
+
+.card-review div{
+  width: 87%;
+}

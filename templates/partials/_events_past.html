@@ -1,0 +1,23 @@
+{% load static %} {% load event_filters %}
+
+<ul class="events-list">
+    {% for event in events %}
+    <li class="card event">
+        <img class="event-image" src="{% static 'images/image_placeholder.jpg' %}" alt="" />
+        <div class="event-info">
+            <h3>{{event.title}}</h3>
+            <hr />
+            <h4>
+                Description: {{event.description}}
+                <br />
+                Date Time: {{event.datetime}}
+                <br />
+                Cost: £{{event.cost}}
+            </h4>
+        </div>
+        <div class="event-controls">
+            <a href="{% url 'events_details' event.id %}" class="button yellow">Details</a>
+        </div>
+        {% endfor %}
+    </li>
+</ul>

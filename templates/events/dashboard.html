@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="column-dashboard">
+    <div class="card-C">
+        <h1>Upcoming Events</h1>
+        <hr>
+        {% include 'partials/_events_upcoming.html' with events=events %}
+    </div>
+    <div class="card-C">
+        <h1>Past Events</h1>
+        <hr>
+        {% include 'partials/_events_past.html' with events=past_events %}
+    </div>
+</section>
+{% endblock %}

@@ -21,13 +21,13 @@
                 </li>
                 {% if user.is_authenticated %}
                 <li>
-                    <a href="#">Dashboard</a>
-                </li>
-                {% endif %}
-                <li>
                     <a href="{% url 'events_list' %}">Events</a>
                 </li>
+                <li>
+                    <a href="{% url 'dashboard' %}">Dashboard</a>
+                </li>
                 </ul>
+                {% endif %}
             </nav>
         </section>
         <nav class="auth-nav">
