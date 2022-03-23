@@ -12,8 +12,11 @@
                 </div>
             </section>
             <section class="card">
-                <img src="{% static 'images/image_placeholder.jpg' %}" alt="Place Holder" class="eventsimg">
-            </section>
+                {% if event.image|length > 0 %}
+                <img class="event-image" src="{{ event.image.url }}" alt="">
+                {% else %}
+                <img class="event-image" src="{% static 'images/image_placeholder.jpg' %}" alt="">
+                {% endif %}            </section>
             <section class="card">
                 <h4>Date/Time:   {{event.datetime}} <br> Cost:    £{{event.cost}}</h4>  
             </section>

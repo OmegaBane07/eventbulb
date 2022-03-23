@@ -17,21 +17,6 @@ def details(request, id):
     eventsFromDB = get_object_or_404(Event, id=id)
     return render(request, 'events/details.html', {"event":eventsFromDB})
 
-def new_review(request, id):
-    event  = get_object_or_404(Event, id=id)
-    if request.method == 'POST':
-        rating = request.POST['rating']
-        text = request.POST['text']
-        new_review = Review(
-            rating = rating,
-            text = text,
-            event = event,
-            user_profile = get_user_profile(request)
-        )
-        new_review.save()
-        return redirect('/events')
-
-
 def list(request):
     today =datetime.today()
     
@@ -76,3 +61,18 @@ def remove_attending(request, id):
     if request.method == "POST":
         request.user.profile.attending.remove(event)
     return redirect("events_list")
+
+@login_required
+def new_review(request, id):
+    event  = get_object_or_404(Event, id=id)
+    if request.method == 'POST':
+        rating = request.POST['rating']
+        text = request.POST['text']
+        new_review = Review(
+            rating = rating,
+            text = text,
+            event = event,
+            user_profile = get_user_profile(request)
+        )
+        new_review.save()
+        return redirect('/events')
