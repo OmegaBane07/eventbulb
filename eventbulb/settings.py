@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-msa&csd5#*@f6yl-b3!2^a+n2_&ge6ies@)n-q2h*r^)v2j-jc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['cameron-eventbulb.herokuapp.com']
 
 
 # Application definition
@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'eventbulb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'eventbulb_events',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
